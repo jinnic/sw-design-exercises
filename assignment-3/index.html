@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div class="logo">
+          Website.com
+        </div>
+        <div class="link">
+          <a href="#" class="active">home</a>
+          <a href="#card-section">cards</a>
+          <a href="#">about</a>
+      </nav>
+      <section class="main-content">
+        <div class="section-part left">
+          <h1>Website.com</h1>
+        </div>
+        <div class="section-part right">
+          <h3>Website of the year</h3>
+          <p>
+            According to <strong>everyone</strong>. If you don’t believe it then <span>you just don’t get it.</span>
+          </p>
+          <p>
+            Sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text
+          </p>
+        </div>
+      </section>
+      <!-- Cards Section -->
+    <section id="card-section">
+     <h2>A lot of cards</h2>
+  <div class="card-container">
+
+    <div class="card white">
+      <div class="header">Card Header</div>
+      <p>Card text card text card text card text card text</p>
+    </div>
+
+    <div class="card black">
+      <div class="header">Card Header</div>
+      <p>Card text card text card text card text card text</p>
+    </div>
+
+    <div class="card pink-header white">
+      <div class="header">Card Header</div>
+      <p>Card text card text card text card text card text</p>
+    </div>
+
+    <div class="card border-highlight">
+      <div class="header">Card Header</div>
+      <p>Card text card text card text card text card text</p>
+    </div>
+
+  </div>
+</section>
+    </main>
+    <script>
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+          // Remove .active from all links
+          navLinks.forEach(l => l.classList.remove('active'));
+          // Add .active to the clicked link
+          event.target.classList.add('active');
+        });
+      });
+    </script>    
+  </body>
+</html>

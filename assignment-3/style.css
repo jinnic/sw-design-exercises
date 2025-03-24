@@ -1,0 +1,162 @@
+:root {
+  --nav-height: 50px;
+  --padding: 1em;
+  --margin-top: calc(var(--nav-height) + 2 * var(--padding));
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+section {
+  height: calc(100vh - var(--margin-top));
+  margin-top: var(--margin-top);
+  transition: 200ms linear 50ms;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* Website layout */
+nav {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  padding: var(--padding);
+  position: fixed;
+  top: 0;
+  width: calc(100% - 2 * var(--padding));
+  height: var(--nav-height);
+  box-shadow: 0 5px 5px gray;
+  background-color: #fff;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.link {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  color: #e0416f;
+}
+
+nav a.active {
+  color: #e0416f;
+  text-decoration: underline;
+}
+
+.main-content {
+  display: flex;
+}
+
+.section-part {
+  flex: 1;
+  padding: 2em;
+}
+
+.left {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.right {
+  background-color: #676767;
+  color: #fff;
+}
+
+/* .left, .right {
+    flex: 1;
+    padding: 2em;
+  }
+
+  .left {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .right {
+    background-color: #676767;
+    color: #fff;
+  } */
+
+.right h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.right p {
+  color: #ddd;
+}
+
+.right span {
+  color: #c7b6ff;
+}
+
+/* Cards Styles */
+#card-section {
+  padding: var(--padding);
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card.white {
+  background-color: white;
+  border: 1px solid #eee;
+}
+
+.card.black {
+  background-color: black;
+  color: white;
+}
+
+.card.pink-header .header {
+  background-color: #e0a9a9;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.card.border-highlight {
+  border: 1px solid #6589f7;
+  color: #e0416f;
+}
+
+.card .header {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
